@@ -5,7 +5,6 @@
    const navLinks = document.querySelector(".nav-links");
    const links = document.querySelectorAll(".nav-links li");
    
-   // Apertura/Chiusura al click sul pulsante
    if (hamburger) {
        hamburger.addEventListener("click", () => {
            navLinks.classList.toggle("open");
@@ -13,14 +12,12 @@
        });
    }
    
-   // Chiusura automatica quando si clicca un link
    links.forEach(link => {
        link.addEventListener("click", () => {
            navLinks.classList.remove("open");
            hamburger.classList.remove("toggle");
        });
    });
-   
    
    /* =========================================
       2. DISPOSITIVO PHYGITAL 3D (Generazione & Animazione)
@@ -30,51 +27,41 @@
        const device = document.getElementById('device3D');
        const wrapper = document.querySelector('.device-visual-wrapper');
    
-       // Controllo di sicurezza se gli elementi esistono
        if (!pillarsContainer || !device || !wrapper) return;
    
-       // Generazione dinamica dei 12 pilastri
        const totalPillars = 12;
        const radius = 130; 
    
        for (let i = 0; i < totalPillars; i++) {
            const pillar = document.createElement('div');
            pillar.classList.add('pillar');
-           // Calcolo posizione circolare
+           // I pilastri vengono posizionati assolutamente rispetto al centro
+           // grazie al CSS che centra .pillar con top/left/bottom/right:0 e margin:auto
            const angle = i * (360 / totalPillars);
+           // Aggiungiamo la traslazione radiale
            pillar.style.transform = `rotateZ(${angle}deg) translateY(${radius}px) rotateZ(-${angle}deg)`;
            pillarsContainer.appendChild(pillar);
        }
    
-       // Effetto Tilt interattivo col Mouse (Desktop)
        wrapper.addEventListener('mousemove', (e) => {
            const rect = wrapper.getBoundingClientRect();
-           // Calcola la posizione del mouse relativa al centro del contenitore
            const x = e.clientX - rect.left - rect.width / 2;
            const y = e.clientY - rect.top - rect.height / 2;
-           
-           // Calcola rotazione (sensibilità ridotta diviso 10)
            const rotateX = 60 - (y / 10);
            const rotateZ = (x / 10);
-   
-           device.style.animation = 'none'; // Ferma rotazione automatica
+           device.style.animation = 'none';
            device.style.transform = `rotateX(${rotateX}deg) rotateZ(${rotateZ}deg)`;
        });
    
-       // Ripristina rotazione automatica quando il mouse esce
        wrapper.addEventListener('mouseleave', () => {
            device.style.animation = 'slowSpin 20s linear infinite';
        });
    }
-   
-   // Avvia la funzione
    initDevice();
-   
    
    /* =========================================
       3. TYPEWRITER EFFECT (Terminale Codice)
       ========================================= */
-   // Testo del codice simulato
    const codeText = [
        `<span class="code-keyword">class</span> Musigramma <span class="code-keyword">extends</span> <span class="code-function">Startup</span> {`,
        `  <span class="code-keyword">constructor</span>() {`,
@@ -97,28 +84,22 @@
    let isTypingStarted = false;
    
    function typeWriter() {
+       if (!typeWriterElement) return;
        if (lineIndex < codeText.length) {
            const currentLine = codeText[lineIndex];
-           
-           // Gestione righe vuote
            if (currentLine === "") {
                typeWriterElement.innerHTML += "<br>";
                lineIndex++;
                setTimeout(typeWriter, 100);
                return;
            }
-   
-           // Scrittura riga
            typeWriterElement.innerHTML += currentLine + "<br>";
            lineIndex++;
-           
-           // Velocità di scrittura casuale per realismo
            const randomSpeed = Math.floor(Math.random() * 200) + 50;
            setTimeout(typeWriter, randomSpeed);
        }
    }
    
-   // Intersection Observer: Fa partire l'animazione solo quando l'utente vede il terminale
    const observer = new IntersectionObserver((entries) => {
        entries.forEach(entry => {
            if (entry.isIntersecting && !isTypingStarted) {
@@ -127,8 +108,109 @@
            }
        });
    });
-   
    const terminalBox = document.querySelector('.terminal-wrapper');
-   if(terminalBox) {
-       observer.observe(terminalBox);
-   }
+   if(terminalBox) observer.observe(terminalBox);
+
+ /* =========================================
+   4. HERO BACKGROUND: RISING DATA FLOW
+   ========================================= */
+const canvas = document.getElementById('hero-canvas');
+if (canvas) {
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let particlesArray = [];
+    
+    // Mouse interaction
+    const mouse = {
+        x: null,
+        y: null,
+        radius: 150 // Raggio di interazione
+    }
+
+    window.addEventListener('mousemove', (event) => {
+        mouse.x = event.x;
+        mouse.y = event.y;
+    });
+
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        initParticles();
+    });
+
+    class Particle {
+        constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.size = Math.random() * 2 + 0.5; // Dimensione base
+            this.baseX = this.x;
+            this.baseY = this.y;
+            // Velocità di salita (più è alta, più sono veloci)
+            this.speedY = Math.random() * 0.5 + 0.2; 
+            // Opacità casuale per profondità
+            this.opacity = Math.random() * 0.5 + 0.1;
+        }
+
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            // Colore Ciano Neon con opacità variabile
+            ctx.fillStyle = 'rgba(0, 243, 255,' + this.opacity + ')';
+            ctx.fill();
+        }
+
+        update() {
+            // Movimento verso l'alto
+            this.y -= this.speedY;
+
+            // Se esce dallo schermo in alto, riappare sotto
+            if (this.y < 0) {
+                this.y = canvas.height;
+                this.x = Math.random() * canvas.width;
+            }
+
+            // Interazione col Mouse (Effetto "Scan")
+            // Calcola distanza tra mouse e particella
+            let dx = mouse.x - this.x;
+            let dy = mouse.y - this.y;
+            let distance = Math.sqrt(dx * dx + dy * dy);
+
+            if (distance < mouse.radius) {
+                // Se il mouse è vicino, la particella diventa più grande e luminosa
+                const scale = (mouse.radius - distance) / mouse.radius;
+                this.size = (Math.random() * 2 + 0.5) + (scale * 3); // Ingrandisce
+                this.opacity = 0.8; // Diventa luminosa
+            } else {
+                // Torna normale
+                this.size = Math.random() * 2 + 0.5;
+                this.opacity = Math.random() * 0.5 + 0.1;
+            }
+
+            this.draw();
+        }
+    }
+
+    function initParticles() {
+        particlesArray = [];
+        // Numero particelle (più alto = più denso)
+        let numberOfParticles = (canvas.height * canvas.width) / 9000;
+        for (let i = 0; i < numberOfParticles; i++) {
+            particlesArray.push(new Particle());
+        }
+    }
+
+    function animate() {
+        requestAnimationFrame(animate);
+        // Pulisce il canvas lasciando una scia quasi impercettibile (effetto motion blur)
+        ctx.clearRect(0, 0, canvas.width, canvas.height); 
+        
+        for (let i = 0; i < particlesArray.length; i++) {
+            particlesArray[i].update();
+        }
+    }
+
+    initParticles();
+    animate();
+}  
