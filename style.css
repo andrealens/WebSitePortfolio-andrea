@@ -571,22 +571,73 @@ h2 .neon-text { animation: neonPulse 2s infinite alternate; }
 /* =========================================
    11. RESPONSIVE MOBILE
    ========================================= */
-@media (max-width: 768px) {
+   @media (max-width: 768px) {
+    /* HERO */
     .hero-name-big { font-size: 2.5rem; }
     .hero-headline { font-size: 1.6rem; }
     .hero { padding: 110px 5% 70px; }
-    .musigramma-card, .deep-grid, .device-grid, .ux-grid, .marketing-grid { grid-template-columns: 1fr; text-align: center; gap: 50px; padding: 30px; }
+    
+    /* GRIGLIE GENERALI */
+    .musigramma-card, .deep-grid, .device-grid, .ux-grid, .marketing-grid, .blueprint-grid { 
+        grid-template-columns: 1fr; 
+        text-align: center; 
+        gap: 40px; 
+        padding: 25px; /* Padding ridotto nei box vetro */
+    }
+    
+    /* MKT & BLUEPRINT */
     .mkt-card { flex-direction: column; text-align: center; align-items: center; }
+    .blueprint-sidebar { display: none; }
+    .blueprint-section { border-left: none; padding: 50px 5%; }
+    .hud-row { grid-template-columns: 1fr; gap: 5px; padding-bottom: 15px; }
+    .flow-steps { flex-direction: column; gap: 30px; }
+    .step-arrow { transform: rotate(90deg); }
+
+    /* VISUAL ORDER */
     .device-visual-wrapper, .card-visual { order: -1; }
+    
+    /* ANIMAZIONI MOBILE */
     .cyber-process-wrapper { flex-direction: column; gap: 25px; }
     .process-line { width: 3px; height: 40px; margin: 0; top: 0; }
     .data-flow { width: 100%; height: 30%; top: 0; left: 0; animation: flowDataVert 2s linear infinite; }
     @keyframes flowDataVert { 0% { top: 0; height: 0; } 50% { height: 30%; } 100% { top: 100%; height: 0; } }
+
+    /* TIMELINE */
     .timeline::after { left: 30px; }
-    .timeline-item { width: 100%; padding-left: 70px; padding-right: 20px; left: 0 !important; text-align: left !important; margin-bottom: 20px; }
+    .timeline-item { width: 100%; padding-left: 70px; padding-right: 10px; left: 0 !important; text-align: left !important; margin-bottom: 20px; }
     .timeline-item::after { left: 19px !important; right: auto !important; }
-    .footer-container { grid-template-columns: 1fr; text-align: center; gap: 50px; }
+
+    /* --- FIX TOOLS (LOGHI) --- */
+    .tools-grid { 
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); /* 3 Loghi per riga precisi */
+        gap: 20px; /* Spazio ridotto */
+        margin-top: 30px;
+    }
+    .tool-item i { font-size: 2.2rem; } /* Icone ridimensionate */
+    .tool-item span { font-size: 0.7rem; } /* Testo piccolo */
+
+    /* --- FIX CTA (BOX FINALE) --- */
+    .cta-box {
+        padding: 40px 20px; /* Meno padding laterale */
+        width: 100%; /* Occupa tutto lo spazio */
+        max-width: 100%;
+        border-radius: 15px;
+    }
+    .cta-box h2 {
+        font-size: 1.6rem; /* Titolo più piccolo */
+        line-height: 1.3;
+    }
+    .cta-links {
+        width: 100%;
+    }
+    .btn-main {
+        width: 100%; /* Bottone largo facile da cliccare */
+        display: block;
+    }
+
+    /* FOOTER */
+    .footer-container { grid-template-columns: 1fr; text-align: center; gap: 40px; }
     .profile-img-footer { margin: 0 auto 20px; }
     .social-icons { justify-content: center; }
-    .tools-grid { gap: 30px; }
 }
