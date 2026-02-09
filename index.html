@@ -9,11 +9,11 @@
 
     <link rel="stylesheet" href="style.css">
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-  
+
     <nav>
         <div class="logo-wrapper">
             <div class="profile-img-header">
@@ -23,10 +23,12 @@
         </div>
         
         <ul class="nav-links">
+            <li><a href="#market">Market & SEO</a></li>
+            <li><a href="#sem">SEM Ads</a></li>
             <li><a href="#ai-orchestration">AI Vision</a></li>
-            <li><a href="#marketing">Marketing</a></li>
+            <li><a href="#ux-ui">UX/UI</a></li>
             <li><a href="#musigramma">Musigramma</a></li>
-            <li><a href="#percorso">Timeline</a></li>
+            <li><a href="#percorso">Percorso</a></li>
             <li><a href="#contatti" class="btn-neon">Contattami</a></li>
         </ul>
 
@@ -38,7 +40,7 @@
     </nav>
 
     <section class="hero">
-        <canvas id="hero-canvas"></canvas>
+        <canvas id="hero-canvas"></canvas> 
 
         <div class="hero-content">
             <h1 class="hero-name-big">ANDREA VITTORIO LENZI</h1>
@@ -55,165 +57,185 @@
         </div>
     </section>
 
-    <div class="lightning-separator-container">
-        <svg class="lightning-svg" viewBox="0 0 1000 40" preserveAspectRatio="none"><path class="bolt-path main" d="M0,20 L50,10 L120,30 L180,5 L250,25 L320,10 L400,35 L480,5 L550,20 L620,0 L700,30 L780,10 L850,25 L920,5 L1000,20" /><path class="bolt-path secondary" d="M0,22 L55,12 L125,32 L185,7 L255,27 L325,12 L405,37 L485,7 L555,22 L625,2 L705,32 L785,12 L855,27 L925,7 L1000,22" /></svg>
+    <div class="lightning-separator-container overlap-hero">
+        <svg class="lightning-svg" viewBox="0 0 1000 40" preserveAspectRatio="none">
+            <path class="bolt-path main" d="M0,20 L50,10 L120,30 L180,5 L250,25 L320,10 L400,35 L480,5 L550,20 L620,0 L700,30 L780,10 L850,25 L920,5 L1000,20" />
+        </svg>
     </div>
 
-    <section id="ai-orchestration" class="glass-section">
+    <section class="hybrid-section">
         <div class="container">
-            <h2 class="section-title">AI <span class="neon-text">Orchestration</span></h2>
+            <div class="hybrid-grid">
+                <div class="hybrid-text">
+                    <h5 class="sub-neon">MY BACKGROUND</h5>
+                    <h2 class="hybrid-title">E-commerce Roots,<br> <span class="neon-text">Limitless</span> Growth.</h2>
+                    <p class="hybrid-desc">
+                        Nasco come <strong>E-commerce Manager</strong>. La gestione dei processi, i KPI e la vendita online sono il mio terreno naturale. 
+                        Ma il mercato oggi richiede fluidità, e la tecnologia mi ha permesso di evolvere.
+                    </p>
+                    <p class="hybrid-desc">
+                        <strong>L'AI ha abbattuto la barriera dell'ignoto.</strong>
+                        Cose che prima richiedevano team interi o competenze verticali che non possedevo — dalla stesura di complessi <strong>Bandi di Gara</strong> alla modellazione di <strong>Business Plan</strong> finanziari — oggi sono alla mia portata.
+                    </p>
+                    <p class="hybrid-desc">
+                        Non ho più paura di approcciare ciò che non ho mai fatto. 
+                        Con il giusto supporto tecnologico, trasformo l'inesperienza in competenza operativa in tempi record.
+                    </p>
+                </div>
+                <div class="hybrid-list-wrapper">
+                    <h5 class="sub-neon" style="text-align: left;">CAPABILITIES UNLOCKED</h5>
+                    <ul class="unlocked-list">
+                        <li><i class='bx bx-check-double'></i><div><strong>Tender & Bandi</strong><span>Analisi requisiti, stesura tecnica e documentale.</span></div></li>
+                        <li><i class='bx bx-check-double'></i><div><strong>Strategic Planning</strong><span>Business Plan dettagliati e proiezioni finanziarie.</span></div></li>
+                        <li><i class='bx bx-check-double'></i><div><strong>Rapid Prototyping</strong><span>Dall'idea al documento esecutivo in 24h.</span></div></li>
+                        <li><i class='bx bx-check-double'></i><div><strong>Legal & Compliance Tech</strong><span>Prima stesura contrattualistica e analisi rischi.</span></div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="hacking-separator-container">
+        <div class="hacking-text">
+            <span class="console-prefix">>_</span><span id="hacking-typed-text"></span><span class="cursor"></span>
+        </div>
+    </div>
+
+    <section id="market" class="market-section">
+        <div class="container">
+            <h2 class="section-title">Market <span class="neon-text">Intelligence</span></h2>
             
-            <div class="ai-content-box">
-                <h3>Traduco le tue idee in oggetti concreti grazie all'AI</h3>
-                <p class="ai-desc">
-                    Non scrivo codice complesso, disegno logiche. La mia forza non è nel singolo linguaggio, 
-                    ma nella capacità di orchestrare <strong>Intelligenze Artificiali Avanzate</strong> (Gemini, Claude, GPT) 
-                    per produrre output di livello enterprise. Dove altri vedono limiti tecnici, io vedo un prompt, un flusso, una soluzione.
+            <div class="market-intro">
+                <h3>Analisi Strategica e Digital Intelligence</h3>
+                <p>
+                    Lanciare un progetto senza analizzare il contesto è il modo più veloce per bruciare budget. 
+                    La mia ricerca non è un report teorico, ma un'indagine operativa: <strong>Validazione Preliminare</strong> (per capire se esiste domanda) e <strong>Monitoraggio Costante</strong>.
                 </p>
+            </div>
 
-                <div class="cyber-process-wrapper">
-                    <div class="process-node">
-                        <div class="holo-icon-small"><i class='bx bx-bulb'></i></div>
-                        <span>Visione</span>
+            <div class="radar-grid">
+                <div class="radar-core">
+                    <div class="holo-container" style="margin-bottom: 0; height: 80px;">
+                        <i class='bx bx-data holo-icon' style="font-size: 3.5rem;"></i>
+                        <div class="holo-base"></div>
                     </div>
-                    <div class="process-line">
-                        <div class="data-flow"></div>
-                    </div>
-                    <div class="process-node">
-                        <div class="holo-icon-small"><i class='bx bx-chip'></i></div>
-                        <span>AI Prompting</span>
-                    </div>
-                    <div class="process-line">
-                        <div class="data-flow delay-1"></div>
-                    </div>
-                    <div class="process-node">
-                        <div class="holo-icon-small"><i class='bx bx-code-block'></i></div>
-                        <span>Generazione</span>
-                    </div>
-                    <div class="process-line">
-                        <div class="data-flow delay-2"></div>
-                    </div>
-                    <div class="process-node">
-                        <div class="holo-icon-small"><i class='bx bx-rocket'></i></div>
-                        <span>Output Reale</span>
-                    </div>
+                    <div class="core-label">DATA CORE</div>
+                </div>
+
+                <div class="radar-node node-1">
+                    <h4><i class='bx bx-search-alt'></i> Analisi Domanda</h4>
+                    <p>Non solo volumi, ma intenzioni. Analizzo le <strong>domande reali</strong> sui motori di ricerca e le discussioni sui social per intercettare i <em>Pain Points</em> e prevedere la stagionalità.</p>
+                </div>
+                <div class="radar-node node-2">
+                    <h4><i class='bx bx-ghost'></i> Reverse Engineering</h4>
+                    <p>Studio i competitor per trovare le loro lacune. Analizzo le loro <strong>Ads</strong> e il posizionamento organico per trovare le "fessure" in cui il tuo brand può inserirsi con autorità.</p>
+                </div>
+                <div class="radar-node node-3">
+                    <h4><i class='bx bx-map-pin'></i> Go-to-Market</h4>
+                    <p>Dal dato all'azione. L'analisi detta le regole: la SEO e la SEM diventano semplicemente gli strumenti per portare il messaggio giusto al target profilato.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="blueprint-section">
-        <div class="container">
-            
-            <div class="blueprint-grid">
-                <div class="blueprint-sidebar">
-                    <div class="tech-line-vertical"></div>
-                    <h3 class="vertical-text">ARCHITECTURAL_LOGIC // v.2.0</h3>
-                </div>
+    <div class="lightning-separator-container">
+        <svg class="lightning-svg" viewBox="0 0 1000 40" preserveAspectRatio="none"><path class="bolt-path main" d="M0,20 L50,10 L120,30 L180,5 L250,25 L320,10 L400,35 L480,5 L550,20 L620,0 L700,30 L780,10 L850,25 L920,5 L1000,20" /></svg>
+    </div>
 
-                <div class="blueprint-content">
+    <section id="seo" class="glass-section">
+        <div class="container">
+            <h2 class="section-title">SEO <span class="neon-text">Architecture</span></h2>
+            <div class="seo-intro-box">
+                <h3>Single Source of <span class="neon-text">Truth</span></h3>
+                <p>
+                    La SEO non è più un gioco di keywords, è un'infrastruttura tecnica. 
+                    Il mio approccio elimina l'intermediazione: lavoro direttamente alla fonte del dato reale.
+                </p>
+            </div>
+            <div class="seo-grid">
+                <div class="seo-card">
+                    <div class="holo-container-small">
+                        <i class='bx bx-data holo-icon-small-anim'></i>
+                        <div class="holo-base-small"></div>
+                    </div>
+                    <h4>Dati Reali, Non Stime</h4>
+                    <p>Uso <strong>Google Search Console</strong> e <strong>GA4</strong> come unici arbitri. Non baso decisioni su ipotesi statistiche, ma su come Google vede realmente il tuo sito.</p>
+                    <div class="tech-tag">GSC NATIVE DATA</div>
+                </div>
+                <div class="seo-card">
+                    <div class="holo-container-small">
+                        <i class='bx bx-code-alt holo-icon-small-anim delay-1'></i>
+                        <div class="holo-base-small"></div>
+                    </div>
+                    <h4>Audit "Surgical"</h4>
+                    <p>Analisi manuale e mirata. Verifico il codice sorgente e il rendering direttamente nel browser. Risolvo problemi che impattano il business, non la teoria.</p>
+                    <div class="tech-tag">CODE INSPECTION</div>
+                </div>
+                <div class="seo-card">
+                    <div class="holo-container-small">
+                        <i class='bx bx-tachometer holo-icon-small-anim delay-2'></i>
+                        <div class="holo-base-small"></div>
+                    </div>
+                    <h4>Core Web Vitals</h4>
+                    <p>Ottimizzo le performance (LCP, CLS, INP) usando Lighthouse per garantire un'esperienza fluida che Google premia.</p>
+                    <div class="tech-tag">PERFORMANCE FIRST</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sem" class="sem-section">
+        <div class="container">
+            <h2 class="section-title">High Efficiency <span class="neon-text">Ads</span></h2>
+            
+            <div class="sem-grid">
+                <div class="sem-text">
+                    <h3 class="sem-headline">Approccio "Cecchino"<br>vs "A strascico"</h3>
+                    <p class="sem-desc">
+                        Non serve un budget illimitato, serve una strategia che non ammetta sprechi. 
+                        Il mio approccio al Pay-Per-Click è chirurgico: invece di traffico generico, punto a intercettare esclusivamente la <strong>domanda consapevole</strong>.
+                    </p>
+                    <p class="sem-desc">
+                        Lavoro per portare utenti pronti all'azione, non semplici curiosi che consumano il budget.
+                    </p>
                     
-                    <div class="blueprint-item">
-                        <div class="tech-marker">01</div>
-                        <h2 class="blueprint-headline">Dall’Idea all’Asset.</h2>
-                        <p class="blueprint-text-large">
-                            Molti si fermano alla superficie dell'AI; io ne sblocco il potenziale operativo. 
-                            Non scrivo codice ridondante, ma <span class="highlight">disegno le logiche</span> che rendono l'Intelligenza Artificiale uno strumento di produzione concreto e scalabile.
-                        </p>
-                    </div>
-
-                    <div class="blueprint-item">
-                        <div class="tech-marker">02</div>
-                        <h3 class="blueprint-subtitle">Visione Sistemica & Engineering</h3>
-                        
-                        <div class="hud-list">
-                            <div class="hud-row">
-                                <span class="hud-label">TARGETING</span>
-                                <span class="hud-value">Analisi obiettivo e selezione tecnologia (Gemini, Claude, GPT).</span>
+                    <div class="sem-methodology">
+                        <div class="method-row">
+                            <i class='bx bx-block'></i>
+                            <div>
+                                <strong>Esclusione Maniacale</strong>
+                                <span>Lavoro costante su keyword negative per "Spreco Zero".</span>
                             </div>
-                            <div class="hud-row">
-                                <span class="hud-label">PROMPTING</span>
-                                <span class="hud-value">Istruzioni zero-shot/few-shot per output deterministici.</span>
-                            </div>
-                            <div class="hud-row">
-                                <span class="hud-label">INTEGRATION</span>
-                                <span class="hud-value">L'AI non come chatbot, ma come motore di flusso.</span>
+                        </div>
+                        <div class="method-row">
+                            <i class='bx bx-target-lock'></i>
+                            <div>
+                                <strong>Focus Nicchia</strong>
+                                <span>Segmentazione granulare per geografia, orario e device.</span>
                             </div>
                         </div>
                     </div>
-
-                    <div class="blueprint-item">
-                        <div class="tech-marker">03</div>
-                        <h3 class="blueprint-subtitle">Protocollo Operativo</h3>
-                        
-                        <div class="flow-steps">
-                            <div class="step">
-                                <i class='bx bx-scan'></i>
-                                <h4>Analisi</h4>
-                                <p>Smonto l'idea nei suoi componenti atomici.</p>
-                            </div>
-                            <div class="step-arrow"><i class='bx bx-chevron-right'></i></div>
-                            <div class="step">
-                                <i class='bx bx-git-merge'></i>
-                                <h4>Orchestrazione</h4>
-                                <p>Collego i modelli AI per gestire i segmenti.</p>
-                            </div>
-                            <div class="step-arrow"><i class='bx bx-chevron-right'></i></div>
-                            <div class="step">
-                                <i class='bx bx-cube'></i>
-                                <h4>Concretizzazione</h4>
-                                <p>Trasformo il flusso in asset business.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="blueprint-quote">
-                        <span class="quote-symbol">"</span>
-                        <p>Non risolvo problemi con la forza bruta del codice, ma con l'eleganza di un'architettura intelligente.</p>
-                        <span class="quote-author">_Andrea V. Lenzi</span>
-                    </div>
-
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="marketing" class="glass-section">
-        <div class="container">
-            <h2 class="section-title">Digital <span class="neon-text">Strategy</span></h2>
-            
-            <div class="marketing-grid">
-                <div class="market-text">
-                    <p>
-                        Il codice costruisce il motore, ma è il marketing che lo fa correre. 
-                        Ho studiato a fondo i principi del <strong>Digital Marketing</strong> per trasformare i prodotti in asset vendibili.
-                    </p>
-                    <p>
-                        Dall'analisi dei dati alla conversione: so come intercettare la domanda consapevole (SEM) 
-                        e stimolare quella latente (Social Ads), traducendo ricerche di mercato in fatturato.
-                    </p>
-                </div>
-                
-                <div class="marketing-cards">
-                    <div class="mkt-card">
-                        <i class='bx bx-target-lock holo-icon-mkt'></i>
-                        <div class="mkt-content">
-                            <h4>SEO & SEM</h4>
-                            <p>Posizionamento organico e gestione campagne Google Ads ad alto ROI.</p>
+                <div class="sem-visual">
+                    <div class="sem-card-tech">
+                        <div class="sem-header">
+                            <i class='bx bx-stats'></i> REPORTING_PROTOCOL
                         </div>
-                    </div>
-                    <div class="mkt-card">
-                        <i class='bx bx-line-chart holo-icon-mkt'></i>
-                        <div class="mkt-content">
-                            <h4>Market Research</h4>
-                            <p>Analisi competitor e trend per definire strategie di go-to-market.</p>
+                        <p style="margin-bottom: 20px; color: #88a0a0; font-size: 0.9rem;">Niente metriche vaghe. Solo KPI che impattano il conto economico.</p>
+                        <div class="kpi-grid">
+                            <div class="kpi-box">
+                                <span class="kpi-label">ROAS</span>
+                                <span class="kpi-value">Active</span>
+                            </div>
+                            <div class="kpi-box">
+                                <span class="kpi-label">CPA</span>
+                                <span class="kpi-value">Optimized</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="mkt-card">
-                        <i class='bx bx-share-alt holo-icon-mkt'></i>
-                        <div class="mkt-content">
-                            <h4>Social Strategy</h4>
-                            <p>Meta Ads & Content Strategy per brand awareness e lead generation.</p>
+                        <div class="cross-channel-box">
+                            <h5 style="color:white; margin-bottom:10px;">Cross-Channel Strategy</h5>
+                            <p style="color:#88a0a0; font-size:0.9rem;">Non esiste il canale "migliore", ma quello più sostenibile. Se il CPC di Search è alto, sposto il budget sulla domanda latente (Social) o Remarketing.</p>
                         </div>
                     </div>
                 </div>
@@ -225,61 +247,131 @@
         <svg class="lightning-svg" viewBox="0 0 1000 40" preserveAspectRatio="none"><path class="bolt-path main" d="M0,20 L50,10 L120,30 L180,5 L250,25 L320,10 L400,35 L480,5 L550,20 L620,0 L700,30 L780,10 L850,25 L920,5 L1000,20" /></svg>
     </div>
 
-    <section id="expertise" class="glass-section">
+    <section id="ai-orchestration" class="glass-section">
         <div class="container">
-            <h2 class="section-title">Technical <span class="neon-text">Expertise</span></h2>
-            <div class="expertise-grid">
-                <div class="exp-card">
-                    <div class="holo-container">
-                        <i class='bx bx-shopping-bag holo-icon'></i>
-                        <div class="holo-base"></div>
-                    </div>
-                    <h3>E-commerce Management</h3>
-                    <p>Strategie scalabili su WooCommerce e Shopify, ottimizzazione conversioni e gestione Sprint Agile.</p>
-                </div>
-                <div class="exp-card">
-                    <div class="holo-container">
-                        <i class='bx bx-data holo-icon delay-1'></i>
-                        <div class="holo-base"></div>
-                    </div>
-                    <h3>Data & Analytics</h3>
-                    <p>Expertise in Big Data (IFTS 2023), GA4, Looker Studio e Google Ads Certified.</p>
-                </div>
-                <div class="exp-card">
-                    <div class="holo-container">
-                        <i class='bx bx-movie-play holo-icon delay-2'></i>
-                        <div class="holo-base"></div>
-                    </div>
-                    <h3>Content Creation</h3>
-                    <p>Videomaking professionale, Adobe Creative Suite e prototipazione UX/UI.</p>
+            <h2 class="section-title">AI <span class="neon-text">Orchestration</span></h2>
+            <div class="ai-content-box">
+                <h3>Disegno logiche, non solo codice.</h3>
+                <p class="ai-desc">
+                    La mia forza non è nel singolo linguaggio, ma nella capacità di orchestrare 
+                    <strong>Intelligenze Artificiali Avanzate</strong> (Gemini, Claude, GPT) per produrre output di livello enterprise.
+                </p>
+                <div class="cyber-process-wrapper">
+                    <div class="process-node"><div class="holo-icon-small"><i class='bx bx-bulb'></i></div><span>Visione</span></div>
+                    <div class="process-line"><div class="data-flow"></div></div>
+                    <div class="process-node"><div class="holo-icon-small"><i class='bx bx-chip'></i></div><span>Prompting</span></div>
+                    <div class="process-line"><div class="data-flow delay-1"></div></div>
+                    <div class="process-node"><div class="holo-icon-small"><i class='bx bx-code-block'></i></div><span>Generazione</span></div>
+                    <div class="process-line"><div class="data-flow delay-2"></div></div>
+                    <div class="process-node"><div class="holo-icon-small"><i class='bx bx-rocket'></i></div><span>Asset</span></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="ux-ui" class="automan-section">
+    <section class="blueprint-section">
+        <div class="container">
+            <div class="blueprint-grid">
+                <div class="blueprint-sidebar">
+                    <div class="tech-line-vertical"></div>
+                    <h3 class="vertical-text">ARCHITECTURAL_LOGIC // v.2.0</h3>
+                </div>
+                <div class="blueprint-content">
+                    <div class="blueprint-item">
+                        <div class="tech-marker">01</div>
+                        <h2 class="blueprint-headline">Dall’Idea all’Asset.</h2>
+                        <p class="blueprint-text-large">
+                            Molti si fermano alla superficie dell'AI; io ne sblocco il potenziale operativo. 
+                            Non scrivo codice ridondante, ma <span class="highlight">disegno le logiche</span> che rendono l'Intelligenza Artificiale uno strumento di produzione concreto e scalabile.
+                        </p>
+                    </div>
+                    <div class="blueprint-item">
+                        <div class="tech-marker">02</div>
+                        <h3 class="blueprint-subtitle">Visione Sistemica & Engineering</h3>
+                        <div class="hud-list">
+                            <div class="hud-row"><span class="hud-label">TARGETING</span><span class="hud-value">Analisi obiettivo e selezione tecnologia (Gemini, Claude, GPT).</span></div>
+                            <div class="hud-row"><span class="hud-label">PROMPTING</span><span class="hud-value">Istruzioni zero-shot/few-shot per output deterministici.</span></div>
+                            <div class="hud-row"><span class="hud-label">INTEGRATION</span><span class="hud-value">L'AI non come chatbot, ma come motore di flusso.</span></div>
+                        </div>
+                    </div>
+                    <div class="blueprint-item">
+                        <div class="tech-marker">03</div>
+                        <h3 class="blueprint-subtitle">Protocollo Operativo</h3>
+                        <div class="flow-steps">
+                            <div class="step"><i class='bx bx-scan'></i><h4>Analisi</h4><p>Smonto l'idea nei suoi componenti atomici.</p></div>
+                            <div class="step-arrow"><i class='bx bx-chevron-right'></i></div>
+                            <div class="step"><i class='bx bx-git-merge'></i><h4>Orchestrazione</h4><p>Collego i modelli AI per gestire i segmenti.</p></div>
+                            <div class="step-arrow"><i class='bx bx-chevron-right'></i></div>
+                            <div class="step"><i class='bx bx-cube'></i><h4>Concretizzazione</h4><p>Trasformo il flusso in asset business.</p></div>
+                        </div>
+                    </div>
+                    <div class="blueprint-quote">
+                        <span class="quote-symbol">"</span>
+                        <p>Non risolvo problemi con la forza bruta del codice, ma con l'eleganza di un'architettura intelligente.</p>
+                        <span class="quote-author">_Andrea V. Lenzi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ux-ui" class="glass-section">
         <div class="container">
             <div class="ux-grid">
-                <div class="hologram-wrapper">
-                    <div class="automan-cursor"></div>
-                    <svg class="hologram-svg" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">
-                                <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
-                                <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                            </filter>
-                        </defs>
-                        <rect class="draw-path delay-0" x="20" y="20" width="360" height="40" rx="5" />
-                        <line class="draw-path delay-1" x1="40" y1="40" x2="100" y2="40" stroke-width="6"/> <line class="draw-path delay-1" x1="280" y1="40" x2="360" y2="40" stroke-width="4"/> <rect class="draw-path delay-2" x="20" y="80" width="220" height="120" rx="5" /> <line class="draw-path delay-3" x1="260" y1="90" x2="380" y2="90" stroke-width="4"/> <line class="draw-path delay-3" x1="260" y1="110" x2="340" y2="110" stroke-width="4"/> <rect class="draw-path delay-4" x="260" y="140" width="100" height="30" rx="15" /> <rect class="draw-path delay-5" x="20" y="220" width="110" height="60" rx="5" />
-                        <rect class="draw-path delay-6" x="145" y="220" width="110" height="60" rx="5" />
-                        <rect class="draw-path delay-7" x="270" y="220" width="110" height="60" rx="5" />
-                    </svg>
-                    <div class="holo-floor"></div>
+                
+                <div class="ux-visual">
+                   <div class="automan-box">
+                       <svg class="automan-svg" viewBox="0 0 400 300">
+                           <defs>
+                               <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
+                                   <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                                   <feMerge>
+                                       <feMergeNode in="coloredBlur"/>
+                                       <feMergeNode in="SourceGraphic"/>
+                                   </feMerge>
+                               </filter>
+                               <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+                                   <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0, 243, 255, 0.1)" stroke-width="1"/>
+                               </pattern>
+                           </defs>
+
+                           <rect x="0" y="0" width="100%" height="100%" fill="url(#grid-pattern)" class="grid-bg" />
+
+                           <path id="path-frame" class="auto-line" d="M20,20 L380,20 L380,280 L20,280 L20,20 M20,50 L380,50" />
+                           
+                           <path id="path-ui" class="auto-line delay-ui" d="M40,70 L190,70 L190,170 L40,170 L40,70 M210,70 L360,70 M210,90 L340,90 M210,120 L310,120 L310,150 L210,150 L210,120" />
+
+                           <path id="path-cards" class="auto-line delay-cards" d="M40,190 L140,190 L140,260 L40,260 L40,190 M160,190 L260,190 L260,260 L160,260 L160,190 M280,190 L360,190 L360,260 L280,260 L280,190" />
+
+                           <g class="cursor-group">
+                               <polygon points="0,0 12,4 4,12" fill="#fff" filter="url(#neon-glow)">
+                                   <animateMotion dur="3s" repeatCount="indefinite" calcMode="linear">
+                                       <mpath href="#path-frame"/>
+                                   </animateMotion>
+                               </polygon>
+                           </g>
+                           
+                           <g class="cursor-group delay-ui">
+                               <polygon points="0,0 8,3 3,8" fill="#fff" filter="url(#neon-glow)">
+                                   <animateMotion dur="3s" begin="1s" repeatCount="indefinite" calcMode="linear">
+                                       <mpath href="#path-ui"/>
+                                   </animateMotion>
+                               </polygon>
+                           </g>
+
+                       </svg>
+                   </div>
                 </div>
+
                 <div class="ux-text">
                     <h2 class="section-title" style="text-align: left;">Prototyping & <span class="neon-text">UX/UI</span></h2>
-                    <p>Come in un costrutto digitale, trasformo idee astratte in interfacce tangibili. Il mio processo di design parte dal "Wireframe" strutturale per arrivare all'esperienza utente finale.</p>
-                    <p>Utilizzo <strong>Figma</strong> non come semplice foglio da disegno, ma come ambiente di simulazione logica.</p>
+                    <p class="hybrid-desc">
+                        Come in un costrutto digitale, trasformo idee astratte in interfacce tangibili. 
+                        Il mio processo di design parte dal "Wireframe" strutturale per arrivare all'esperienza utente finale.
+                    </p>
+                    <p class="hybrid-desc">
+                        Utilizzo <strong>Figma</strong> non come semplice foglio da disegno, ma come ambiente di simulazione logica.
+                    </p>
                 </div>
             </div>
         </div>
@@ -340,16 +432,19 @@
                 <div class="device-visual-wrapper">
                     <div class="scene">
                         <div class="device-container" id="device3D">
-                            <div class="base-plate"></div><div class="inner-ring"></div><div class="core-knob"></div><div class="top-cap"></div><div id="pillars-container"></div>
+                            <div class="base-plate"></div>
+                            <div class="inner-ring"></div>
+                            <div id="pillars-container"></div>
+                            <div class="core-knob"></div>
                         </div>
                     </div>
                 </div>
                 <div class="device-text">
                     <h2 class="section-title" style="text-align: left;">L'interfaccia <span class="neon-text">Tangibile</span></h2>
                     <div class="phygital-badge">PATENT PENDING</div>
-                    <p>Il cuore di Musigramma è un dispositivo fisico totalmente analogico che traduce la teoria musicale in esperienza tattile.</p>
+                    <p class="device-desc-fix">Il cuore di Musigramma è un dispositivo fisico totalmente analogico che traduce la teoria musicale in esperienza tattile.</p>
                     <ul class="device-features">
-                        <li><strong><i class='bx bx-hand'></i> Manipolazione Diretta</strong></li>
+                        <li><strong><i class='bx bxs-hand-up'></i> Manipolazione Diretta</strong></li>
                         <li><strong><i class='bx bx-selection'></i> Ghiera Armonica</strong></li>
                         <li><strong><i class='bx bx-shape-triangle'></i> Geometria Tattile</strong></li>
                     </ul>
@@ -361,6 +456,8 @@
     <div class="lightning-separator-container">
         <svg class="lightning-svg" viewBox="0 0 1000 40" preserveAspectRatio="none"><path class="bolt-path main" d="M0,20 L50,10 L120,30 L180,5 L250,25 L320,10 L400,35 L480,5 L550,20 L620,0 L700,30 L780,10 L850,25 L920,5 L1000,20" /></svg>
     </div>
+
+    <section id="percorso" class="glass-section">
 
     <section id="percorso" class="glass-section">
         <div class="container">
@@ -379,7 +476,7 @@
                     <div class="timeline-content">
                         <h3>Big Data Specialist (EQF 5)</h3>
                         <h4>Nuova Didactica - Confindustria Emilia</h4>
-                        <p>Data Driven Decision Making. Attività di consulenza aziendale mirata a <strong>Data Cleaning</strong> e <strong>Data Analysis</strong>.</p>
+                        <p>Data Driven Decision Making. Attività di consulenza mirata a Data Cleaning e Analysis.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -395,7 +492,7 @@
                     <div class="timeline-content">
                         <h3>Socio Graphic Designer, Logistic Manager & Buyer</h3>
                         <h4>Modena Estense 1508</h4>
-                        <p>Ruolo societario attivo nello sviluppo di strategie culturali, gestione logistica e networking imprenditoriale.</p>
+                        <p>Ruolo societario attivo nello sviluppo di strategie culturali, logistica e networking.</p>
                     </div>
                 </div>
             </div>
@@ -456,7 +553,14 @@
             </div>
             <div class="footer-col">
                 <h4>Menu</h4>
-                <ul><li><a href="#ai-orchestration">AI Vision</a></li><li><a href="#marketing">Marketing</a></li><li><a href="#musigramma">Musigramma</a></li><li><a href="#percorso">Percorso</a></li></ul>
+                <ul>
+                    <li><a href="#market">Market & SEO</a></li>
+                    <li><a href="#sem">SEM Ads</a></li>
+                    <li><a href="#ai-orchestration">AI Vision</a></li>
+                    <li><a href="#ux-ui">UX/UI</a></li>
+                    <li><a href="#musigramma">Musigramma</a></li>
+                    <li><a href="#percorso">Percorso</a></li>
+                </ul>
             </div>
             <div class="footer-col">
                 <h4>Connect</h4>
@@ -467,7 +571,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Andrea Vittorio Lenzi. Tutti i diritti riservati.</p>
+            <p>© 2026 Andrea Vittorio Lenzi. Tutti i diritti riservati.</p>
             <p>Designed with <span style="color:var(--neon-cyan)">Code & Vision</span> by Andrea Vittorio Lenzi.</p>
         </div>
     </footer>
