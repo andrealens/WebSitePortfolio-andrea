@@ -199,7 +199,9 @@ h2 .neon-text { animation: neonPulse 2s infinite alternate; }
 .radar-node p { font-size: 0.9rem; color: var(--text-dim); margin: 0; line-height: 1.5; }
 .node-1, .node-2 { text-align: right; border-left: none; border-right: 3px solid var(--petrol-medium); justify-self: end; grid-column: 1; }
 .node-1:hover, .node-2:hover { border-right-color: var(--neon-cyan); transform: translateX(-5px); }
-.node-1 { grid-row: 1; } .node-2 { grid-row: 2; } .node-3 { grid-column: 3; grid-row: 1 / span 2; justify-self: start; }
+.node-1 { grid-row: 1; } .node-2 { grid-row: 2; }
+.node-3 { grid-column: 3; grid-row: 1; justify-self: start; }
+.node-4 { grid-column: 3; grid-row: 2; justify-self: start; }
 
 /* =========================================
    7. SEO ARCHITECTURE
