@@ -201,8 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
             { text: ") {\n", class: "code-punctuation" },
             { text: "      return", class: "code-keyword" },
             { text: " Harmony();\n", class: "code-function" },
-            { text: "    }\n  }\n}\n", class: "code-punctuation" },
-            { text: "|", class: "cursor" }
+            { text: "    }\n  }\n}\n", class: "code-punctuation" }
         ];
 
         let segIndex = 0;
@@ -228,10 +227,27 @@ document.addEventListener("DOMContentLoaded", () => {
                 setTimeout(typeCode, 20);
             }
         }
-        const observer = new IntersectionObserver((entries) => {
-            if(entries[0].isIntersecting) { typeCode(); observer.disconnect(); }
-        });
-        observer.observe(codeEl.parentElement);
+        // Trigger robusto: osserva il wrapper del terminale (elemento con altezza reale),
+        // con fallback se IntersectionObserver non e' disponibile o non scatta.
+        let started = false;
+        const startTyping = () => { if (!started) { started = true; typeCode(); } };
+        const target = codeEl.closest('.terminal-wrapper') || codeEl.parentElement;
+
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) { startTyping(); observer.disconnect(); }
+                });
+            }, { threshold: 0, rootMargin: '0px 0px -10% 0px' });
+            observer.observe(target);
+            // Rete di sicurezza: se dopo 4s il blocco e' gia' a schermo ma non e' partito, parte comunque.
+            setTimeout(() => {
+                const r = target.getBoundingClientRect();
+                if (r.top < window.innerHeight && r.bottom > 0) startTyping();
+            }, 4000);
+        } else {
+            startTyping();
+        }
     }
 
     /* 4. DEVICE 3D ANIMATION (Logica "Old" Ripristinata) */
